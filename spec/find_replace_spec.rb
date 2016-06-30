@@ -1,11 +1,11 @@
 require('rspec')
-require('rck_ppr_scrs')
+require('palindromes')
 
-describe("String#find_replace") do
-  it('return the sum of the correct scores for each letter') do
-    expect('hello universe'.find_replace('universe', 'galaxy')).to(eq('hello galaxy'))
+describe("String#palindromes") do
+  it('return true if string is a palindrome') do
+    expect('race car'.palindromes()).to(eq(true))
   end
-  # it('return the sum of the correct scores for each letter') do
-  #   expect('paper'.beats?('paper')).to(eq('Its a Draw'))
-  # end
+  it('return true if string is a palindrome') do
+    expect('elk'.palindromes()).to(eq(false))
+  end
 end
